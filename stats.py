@@ -29,3 +29,24 @@ def get_num_chars(book_text):
                 num_chars[char] = 1
 
     return num_chars
+
+def sort_on(items):
+    return items["num"]
+
+def create_report(num_chars):
+
+    dict_tmp = {}
+    result = [] 
+
+    for char in num_chars:
+        
+        if char.isalpha():
+
+            dict_tmp["char"] = char
+            dict_tmp["num"] = num_chars[char]
+            result.append(dict_tmp)
+            dict_tmp = {}
+
+    result.sort(reverse=True, key=sort_on)
+
+    return result
