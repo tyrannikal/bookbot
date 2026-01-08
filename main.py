@@ -13,7 +13,7 @@ def main():
     char_count = get_num_chars(get_book_text(filepath))
     sorted_report = create_report(char_count)
 
-    print("============ BOOKBOT ============")
+    print("============= BOOKBOT =============")
     print("Analyzing book found at " + filepath + "...")
     print("----------- Word Count ----------")
     print(f"Found {word_count} total words")
@@ -22,7 +22,7 @@ def main():
     for dict_tmp in sorted_report:
         print(f"{dict_tmp["char"]}: {dict_tmp["num"]}")
 
-    print("============= END ===============")
+    print("============== END ================")
 
 
 main()
